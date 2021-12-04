@@ -1,5 +1,5 @@
 body{
-	background-color: #91AEC1;/*This was to set the entire webpage the light blue color*/
+	background-color: #D4F5F5;/*This was to set the entire webpage the light blue color*/
 }
 
 header{
@@ -43,7 +43,7 @@ nav li{
 nav a{/* the a tags in the nav bar contain text-data so should deal with styling texts*/
 	padding:25px 25px;/* this creates the rectangle shape around the anchor tags*/
 
-	color:white;
+	color:#D4F5F5;
 	border-right: 3px solid yellow;/*to separate each anchor tag, I added a yellow border to the right of each*/ 
 	text-align: center;
 	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
@@ -70,7 +70,7 @@ main{
 	width: 1000px;
 	margin-top: 176px;/* so the main class can begin below the nav bar*/
 
-	background-color: #91AEC1;
+	background-color: #D4F5F5;
 }
 hr{
 	height:3px;
@@ -91,7 +91,7 @@ h1{
 	margin-left: 10px;/*to create some space, and it does not flush completely with the left of the screen*/
 	position: fixed;
 
-	color:yellow;
+	color:#D4F5F5;
 	font-size:65px;
 }
 h2{
@@ -146,10 +146,10 @@ p{
 }
 #contact-me a{
 	text-decoration: none;
-	color:white;
+	color:#1C2541;
 }
 #contact-me a:hover{
-	color: yellow;
+	color: #1C2541;
 	font-size: 28px;
 }
 #contact-me h3{
