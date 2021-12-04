@@ -10,7 +10,7 @@ header{
 	width: 100%;
 	height: 125px;
 	/*style*/
-	background-color:#1C2541;
+	background:#1C2541;
 	background-image:url("uni.gif");/*I used a background image to create the background pattern for the header*/
 	border-bottom: 5px solid #1C2541;
 	box-shadow:1px 2px 1px grey;/* adding small details like shadows to webpage elements help make the webpage feel more professional*/
@@ -23,7 +23,8 @@ nav{
 	float:right;
 	top:28px;
 	/*display*/
-	margin-right:165px;
+	margin-right:100px;
+	
 	/*since the nav bar is essentially a <ul> item I will style the <ul>, <li>, and <a> tags that are within the nav bar*/
 }
 
