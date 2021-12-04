@@ -1,5 +1,5 @@
 body{
-	background-color: #D4F5F5;/*This was to set the entire webpage the light blue color*/
+	background-color: #6DB1BF;/*This was to set the entire webpage the light blue color*/
 }
 
 header{
@@ -10,7 +10,7 @@ header{
 	width: 100%;
 	height: 125px;
 	/*style*/
-	background-image: url("pattern-1.jpg");/*I used a background image to create the background pattern for the header*/
+	background-image:url("uni.gif");/*I used a background image to create the background pattern for the header*/
 	border-bottom: 5px solid #1C2541;
 	box-shadow:1px 2px 1px grey;/* adding small details like shadows to webpage elements help make the webpage feel more professional*/
 
@@ -43,7 +43,7 @@ nav li{
 nav a{/* the a tags in the nav bar contain text-data so should deal with styling texts*/
 	padding:25px 25px;/* this creates the rectangle shape around the anchor tags*/
 
-	color:#D4F5F5;
+	color:#6DB1BF;
 	border-right: 3px solid yellow;/*to separate each anchor tag, I added a yellow border to the right of each*/ 
 	text-align: center;
 	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
@@ -70,11 +70,11 @@ main{
 	width: 1000px;
 	margin-top: 176px;/* so the main class can begin below the nav bar*/
 
-	background-color: #D4F5F5;
 }
 hr{
 	height:3px;
-	margin: 25px;/* to create some space around line breaks*/
+	width:1000px;
+	margin: 25px 0px;/* to create some space around line breaks*/
 	
 	background-color: yellow;
 }
@@ -85,13 +85,13 @@ h1,h2{/*<h1> anf <h2> tags are ony used at the topleft of the nav bar, I wanted 
 	display: inline-block;
 
   	font-family:  'Didot', 'Didot LT STD', 'Hoefler Text', 'Garamond', serif;
+  	color:#6DB1BF;
 }
 h1{
 	margin-top: 20px;/*so it is not completely flush with the top of the screen like the <header> parent container does*/
 	margin-left: 10px;/*to create some space, and it does not flush completely with the left of the screen*/
 	position: fixed;
 
-	color:#D4F5F5;
 	font-size:65px;
 }
 h2{
@@ -99,7 +99,6 @@ h2{
 	padding-left: 165px;/* so the text would be positioned centered underneath the <h1>*/
 	margin-top: 85px;/*so it can be below the <h1>*/
 
-	color:#1C2541;
 	font-size: 32px;
 }
 h2:hover,h1:hover {
