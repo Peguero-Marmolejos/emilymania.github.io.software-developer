@@ -20,10 +20,13 @@ header{
 nav{
 	/*position* I wanted the nav bar (anchor tags to web site sections) to be to the far right, so float right, 
 	But not flush with the right of the screen so I added margin right to create some distance  */
-	float:right;
+	position:fixed;
+	
 	top:28px;
+	margin-left: 840px;
 	/*display*/
-	margin-right:100px;
+	margin-right:0px;
+	display:inline-block;
 	
 	/*since the nav bar is essentially a <ul> item I will style the <ul>, <li>, and <a> tags that are within the nav bar*/
 }
@@ -58,6 +61,7 @@ nav li a:hover{/*designing how it appears to hover over nav bar list items*/
 	padding:25px 25px;/*to match the padding around the <a> items*/
 	
 	background-color: #1C2541;
+	opacity: 0.3;
 	color:yellow;
 	text-align: center;	
 }
