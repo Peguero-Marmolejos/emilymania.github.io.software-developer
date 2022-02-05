@@ -149,18 +149,24 @@ p{
 	list-style-type: none;
 
 }
-#contact-me a{
-	text-decoration: none;
-	color:#1C2541;
-}
-#contact-me a:hover{
-	color: #1C2541;
-	font-size: 28px;
-}
 #contact-me h3{
 	float: left;
 	margin-right: 25px;
 }
+#contact-me a{
+	text-decoration: none;
+	color:#1C2541;
+}
+.e-mail:hover{
+	font-size: 40px;
+}
+.linked-in a:hover{
+	font-size: 40px;
+}
+.github a:hover{
+	font-size: 40px;
+}
+
 footer{
 	position:relative;/*so the position of the header is relative to the last HTML item*/
    	bottom:0;/*so there are 0px between the bottom of the screen and the footer*/
