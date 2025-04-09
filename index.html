@@ -1,55 +1,63 @@
 <!DOCTYPE html>
-<html lang ="en">
+<html lang="en">
 <head>
-	<title>Emily the Developer</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<link href="style.css" rel="stylesheet" type="text/css">
-
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-	<link href="style.css" rel="stylesheet" type="text/css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emily the Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-	<header id="software-developer"><!--naming semantic HTML containers with relevant info, helps search engine optimization-->
-		<h1 >Emily Peguero Marmolejos</h1>
-		<h2>Software  Developer</h2>
-		<nav>
-			<ul>
-				<li><a href="#introduction">Introduction</a></li>
-				<li><a href="#about-me">About Me</a></li>	
-				<li><a href="#contact-me">Contact Me</a></li>
-			</ul>
-		</nav>	
-	</header>
-	<main>
-		<article id="introduction"><!--to help direct anchor tag an style this section of the webpage-->
-			<h3>INTRODUCTION</h3>
-			<img src="me.jpg" alt="Emily Peguero Marmolejos-software-devloper" class="circular" width="275">
-			<p>Emily here, a software developer with an affinity for mathematics, logic-based problem solving, philosophy, poetry, and physics.</p>
-			<p>I am born, raised, originally from New York City currently in Fargo, ND.</p>
-		</article>
-		<hr>
-		<article id="about-me">
-			<h3>ABOUT ME</h3>
-			<p>Let's play chess! I react to watching a good chess game the way most people react to watching a good boxing match.</p>
-			<p>The idea of the masses working together to achieve a great change, sparks inspiration in me, I like working in teams and lifting others up.</p>
-			<p>I'm logical (I chose to minor in math) yet, my colorful life has taught me that connecting with others is where the valuable times are found.</p>
-			<p>Gym bro-in-training, novice bio-hacker, let's live forever!</p>
-		</article>
-		<hr>
-		<article id="contact-me">
-			<h3>CONTACT INFO</h3>
-			<ol>
-				<li class = "linked-in"><a href="https://www.linkedin.com/in/peguero-marmolejos/" target="_blank"> LinkedIn </a></li><!--target _blank opens in a new unnamed window-->
-				<li class = "github"><a href="https://github.com/peguero-marmolejos" target="_blank"> Look at Git Hub! </a></li>
-				<li class = "e-mail"><a href="mailto:erpegueromarmolejos@gmail.com?subject=Let's%20talk&20about%20Software%20Development%20Roles&body=Hello,%20I'm%20glad%20I%20found%20your%20webpage%20and%20would%20be%20interested%20in%20discussing%20different%20software%20development%20positions,%20and%20finding%20a%20role%20that%20suites%20you%20best!%20Let's%20schedule%20a%20time%20to%20connect." target="_blank"> Email me! </a></li>	
-			</ol>
-		</article>
-		<hr>
-	</main>
-	<footer>
-		Emily Peguero Marmolejos, the Software Developer
-	</footer>
-	
+  <header class="site-header">
+    <div class="branding">
+      <h1>Emily Peguero Marmolejos</h1>
+      <h2>Software Developer</h2>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#contact-me">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article id="introduction" data-aos="fade-up">
+      <h3>Introduction</h3>
+      <img src="me.jpg" alt="Emily Peguero Marmolejos - Software Developer" class="circular" width="275" />
+      <p data-aos="fade-up" data-aos-delay="100">Emily here, a software developer with an affinity for mathematics, logic-based problem solving, philosophy, poetry, and physics.</p>
+      <p data-aos="fade-up" data-aos-delay="200">Born and raised in New York City, now based in Fargo, ND.</p>
+    </article>
+
+    <section id="about-me">
+      <h3>About Me</h3>
+      <p>Let's play chess! I react to a good chess game the way most people react to a great boxing match.</p>
+      <p>Collaboration inspires me. I enjoy working with teams and uplifting others.</p>
+      <p>I'm logical (I minored in math), but my colorful life taught me the value of human connection.</p>
+      <p>Gym bro-in-training, novice bio-hacker — let’s live forever!</p>
+    </section>
+
+    <section id="contact-me">
+      <h3>Contact</h3>
+      <ul class="contact-list">
+        <li><a href="https://www.linkedin.com/in/peguero-marmolejos/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/peguero-marmolejos" target="_blank">GitHub</a></li>
+        <li><a href="mailto:erpegueromarmolejos@gmail.com?subject=Let’s%20Talk">Email Me</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    © Emily Peguero Marmolejos — Software Developer
+  </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+     AOS.init({
+       duration: 800,
+       once: true
+     });
+  </script>
 </body>
-</html>	
+</html>
