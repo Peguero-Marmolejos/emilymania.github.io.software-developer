@@ -31,6 +31,10 @@ nav{
 	/*since the nav bar is essentially a <ul> item I will style the <ul>, <li>, and <a> tags that are within the nav bar*/
 }
 
+nav{
+	width: 100%;
+}
+
 nav ul{/*adding display flex and justify-content center helped wil removing all gaps when a:hover is being used,
 	justify-content explain how the browser allocates space around a flex container itm, display flex gives an html items 
 	the ability to fit to hat the browser decides ids best for a given sreen, and then creates a container, that gets designed
@@ -38,7 +42,8 @@ nav ul{/*adding display flex and justify-content center helped wil removing all 
 	display:flex;
 	justify-content: center;
 	list-style-type: none;/*this removes bullet points that automatically come with <li> items*/
-
+	margin: 0;
+    	padding: 0;
 }
 
 nav li{
@@ -71,12 +76,14 @@ h3{/* all subheadings should have the same font and style*/
 	text-align: center;
 
 }
+
 main{
 	margin: 0 auto;/*this centers the contents within the /<main></main>*/
 	width: 1000px;
 	margin-top: 176px;/* so the main class can begin below the nav bar*/
 
 }
+
 hr{
 	height:3px;
 	width:1000px;
@@ -84,7 +91,6 @@ hr{
 	
 	background-color: yellow;
 }
-
 
 h1,h2{/*<h1> anf <h2> tags are ony used at the topleft of the nav bar, I wanted these 
 	tags to lay underneath one another, and they should have the same font*/
@@ -100,6 +106,7 @@ h1{
 
 	font-size:65px;
 }
+
 h2{
 	float:left;/*As an inline-lock dislay item I also wanted this tag to float left and land directly underneath the <h1> tag*/
 	padding-left: 165px;/* so the text would be positioned centered underneath the <h1>*/
@@ -107,6 +114,7 @@ h2{
 
 	font-size: 32px;
 }
+
 h2:hover,h1:hover {
 	color:white;
 }
@@ -117,6 +125,7 @@ p{
 	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
 	text-align: center;
 }
+
 #introduction{
 	color:#1C2541;
 	display: inline;/*so that it can begin undeneath the last element(the nav bar)*/
@@ -125,12 +134,14 @@ p{
 	padding:100px 50px 0px 50px; 
 
 }
+
 #about-me{
 	display:inline-block;/*so the about me section can have an easily managed background color, it is an inline block item instead of just an inline item*/
 
 	color:white;
 	background-color: #1C2541;
 }
+
 .circular{/* class named circular to design the circular image of myself*/
     display:inline-block;    
     margin-left:350px;
@@ -139,6 +150,7 @@ p{
     text-align: center;
 
 }
+
 #contact-me ol{/*ordered list because it was a requirment, yet this could have been a <ul>*/
 	padding-top:20px;
 	margin:10px 0px 0px 15px;
@@ -149,20 +161,25 @@ p{
 	list-style-type: none;
 
 }
+
 #contact-me h3{
 	float: left;
 	margin-right: 25px;
 }
+
 #contact-me a{
 	text-decoration: none;
 	color:#1C2541;
 }
+
 .e-mail:hover{
 	font-size: 40px;
 }
+
 .linked-in a:hover{
 	font-size: 40px;
 }
+
 .github a:hover{
 	font-size: 40px;
 }
