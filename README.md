@@ -1,28 +1,27 @@
-# 🌐 Personal Website
+# Personal Portfolio Website
 
-Welcome to my personal website! This site is a simple and elegant front-end project built with **HTML**, **CSS**, and **JavaScript**. It showcases my work, projects, and interests in a clean and responsive design.
+This repository contains the source code for my personal portfolio website, developed using **HTML**, **CSS**, and **JavaScript**. The project demonstrates proficiency in front-end development through a responsive layout, structured codebase, and interactive user experience.
 
-## 🔧 Tech Stack
+## Technologies Used
 
-- **HTML5** – For structuring the content
-- **CSS3** – For styling and layout
-- **JavaScript** – For interactivity and dynamic elements
+- **HTML5** – Semantic markup and page structure
+- **CSS3** – Responsive design, layout styling, and transitions
+- **JavaScript (ES6)** – DOM manipulation and client-side interactivity
 
-## 🚀 Features
+## Features
 
-- Fully responsive design
-- Smooth navigation and scrolling
-- Interactive elements powered by JavaScript
-- Minimalist aesthetic and user-friendly interface
-
-## 📁 Folder Structure
+- Responsive design optimized for desktop and mobile devices
+- Clean, modular codebase with separation of concerns
+- Interactive components implemented with vanilla JavaScript
+- Minimalist UI with a focus on usability and accessibility
 
 
-## 📌 How to Use
+## Deployment
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+The website is deployed via **GitHub Pages** and can be accessed at:
 
-Let me know if you want to add sections like **About Me**, **Credits**, **License**, or tweak the tone to be more casual, technical, or personal!
+👉 [https://peguero-marmolejos.github.io/]
 
+
+Contact
+For questions, feedback, or collaboration opportunities, please feel free to reach out via GitHub or email.
