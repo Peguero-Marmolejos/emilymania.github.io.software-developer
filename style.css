@@ -1,198 +1,225 @@
-body{
-	background-color: #6DB1BF;/*This was to set the entire webpage the light blue color*/
+:root {
+  --main-blue: #1C2541;
+  --accent-blue: #6DB1BF;
+  --highlight-yellow: yellow;
+  --font-body: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+  --font-heading: 'Didot', 'Didot LT STD', 'Hoefler Text', 'Garamond', serif;
 }
 
-header{
-	/*position fixed, and top 0, so the header is permanently at the top of the page no matter where you scroll*/
-	top: 0px;
-	position:fixed;
-	/*display*/
-	width: 100%;
-	height: 125px;
-	/*style*/
-	background:#1C2541;
-	background-image:url("uni.gif");/*I used a background image to create the background pattern for the header*/
-	border-bottom: 5px solid #1C2541;
-	box-shadow:1px 2px 1px grey;/* adding small details like shadows to webpage elements help make the webpage feel more professional*/
-
+* {
+  box-sizing: border-box;
 }
 
-nav{
-	/*position* I wanted the nav bar (anchor tags to web site sections) to be to the far right, so float right, 
-	But not flush with the right of the screen so I added margin right to create some distance  */
-	position:fixed;
-	
-	top:28px;
-	margin-left: 840px;
-	/*display*/
-	margin-right:0px;
-	display:inline-block;
-	
-	/*since the nav bar is essentially a <ul> item I will style the <ul>, <li>, and <a> tags that are within the nav bar*/
+body {
+  margin: 0;
+  background-color: var(--accent-blue);
+  font-family: var(--font-body);
+  color: var(--main-blue);
 }
 
-nav{
-	width: 100%;
+/* Header */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 125px;
+  background: var(--main-blue) url("uni.gif") repeat;
+  border-bottom: 5px solid var(--main-blue);
+  box-shadow: 1px 2px 1px grey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 1000;
 }
 
-nav ul{/*adding display flex and justify-content center helped wil removing all gaps when a:hover is being used,
-	justify-content explain how the browser allocates space around a flex container itm, display flex gives an html items 
-	the ability to fit to hat the browser decides ids best for a given sreen, and then creates a container, that gets designed
-	based on the axisis and parameters of the flex container*/
-	display:flex;
-	justify-content: center;
-	list-style-type: none;/*this removes bullet points that automatically come with <li> items*/
-	margin: 0;
-    	padding: 0;
+.branding h1,
+.branding h2 {
+  margin: 0;
+  color: var(--accent-blue);
+  font-family: var(--font-heading);
 }
 
-nav li{
-	display:inline;/*this makes it so the li elements remain inline with the ul container, regardless of their size*/
+.branding h1 {
+  font-size: 2.5rem;
 }
 
-nav a{/* the a tags in the nav bar contain text-data so should deal with styling texts*/
-	padding:25px 25px;/* this creates the rectangle shape around the anchor tags*/
-
-	color:#6DB1BF;
-	border-right: 3px solid yellow;/*to separate each anchor tag, I added a yellow border to the right of each*/ 
-	text-align: center;
-	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-	text-decoration: none;/*removes underline from a tag*/
-	font-size: 25px;
+.branding h2 {
+  font-size: 1.25rem;
 }
 
-nav li a:hover{/*designing how it appears to hover over nav bar list items*/
-	position: center;
-	padding:25px 25px;/*to match the padding around the <a> items*/
-	
-	background-color: #1C2541;
-	opacity: 0.3;
-	color:yellow;
-	text-align: center;	
-}
-h3{/* all subheadings should have the same font and style*/
-	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-	font-size: 	34px;
-	text-align: center;
-
+.branding:hover h1,
+.branding:hover h2 {
+  color: white;
 }
 
-main{
-	margin: 0 auto;/*this centers the contents within the /<main></main>*/
-	width: 1000px;
-	margin-top: 176px;/* so the main class can begin below the nav bar*/
-
+/* Navigation */
+.main-nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-hr{
-	height:3px;
-	width:1000px;
-	margin: 25px 0px;/* to create some space around line breaks*/
-	
-	background-color: yellow;
+.main-nav a {
+  text-decoration: none;
+  color: var(--accent-blue);
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-right: 3px solid var(--highlight-yellow);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h1,h2{/*<h1> anf <h2> tags are ony used at the topleft of the nav bar, I wanted these 
-	tags to lay underneath one another, and they should have the same font*/
-	display: inline-block;
-
-  	font-family:  'Didot', 'Didot LT STD', 'Hoefler Text', 'Garamond', serif;
-  	color:#6DB1BF;
-}
-h1{
-	margin-top: 20px;/*so it is not completely flush with the top of the screen like the <header> parent container does*/
-	margin-left: 10px;/*to create some space, and it does not flush completely with the left of the screen*/
-	position: fixed;
-
-	font-size:65px;
+.main-nav a:hover {
+  background-color: var(--main-blue);
+  color: var(--highlight-yellow);
+  opacity: 0.7;
 }
 
-h2{
-	float:left;/*As an inline-lock dislay item I also wanted this tag to float left and land directly underneath the <h1> tag*/
-	padding-left: 165px;/* so the text would be positioned centered underneath the <h1>*/
-	margin-top: 85px;/*so it can be below the <h1>*/
-
-	font-size: 32px;
+/* Main Content */
+main {
+  max-width: 1000px;
+  margin: 160px auto 0 auto;
+  padding: 1rem;
 }
 
-h2:hover,h1:hover {
-	color:white;
-}
-p{
-	padding: 0px 50px;/*so all <p> have 0 padding on the top and bottom, and 25px on the sides*/
-
-	font-size:20px;
-	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-	text-align: center;
+section {
+  margin-bottom: 3rem;
+  text-align: center;
 }
 
-#introduction{
-	color:#1C2541;
-	display: inline;/*so that it can begin undeneath the last element(the nav bar)*/
-	text-align: left;
-
-	padding:100px 50px 0px 50px; 
-
+h3 {
+  font-size: 2rem;
 }
 
-#about-me{
-	display:inline-block;/*so the about me section can have an easily managed background color, it is an inline block item instead of just an inline item*/
-
-	color:white;
-	background-color: #1C2541;
+p {
+  font-size: 1.1rem;
+  padding: 0.5rem 2rem;
 }
 
-.circular{/* class named circular to design the circular image of myself*/
-    display:inline-block;    
-    margin-left:350px;
+/* Image */
+.circular {
+  display: block;
+  margin: 0 auto 2rem auto;
+  border-radius: 50%;
+}
 
-    border-radius: 50%;/*gives img tag an ovular shape*/
+/* Contact Section */
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-list li {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+
+.contact-list a {
+  text-decoration: none;
+  color: var(--main-blue);
+  transition: font-size 0.2s ease;
+}
+
+.contact-list a:hover {
+  font-size: 2rem;
+}
+
+/* Footer */
+footer {
+  background-color: var(--main-blue);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    height: auto;
     text-align: center;
+    padding: 1rem;
+  }
 
+  .main-nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  main {
+    margin-top: 220px;
+    padding: 1rem;
+  }
+
+  .branding h1 {
+    font-size: 2rem;
+  }
+
+  .branding h2 {
+    font-size: 1rem;
+  }
+  /* Toggle switch styling */
+.dark-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+.switch input { display: none; }
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: #2196F3;
+}
+input:checked + .slider:before {
+  transform: translateX(26px);
 }
 
-#contact-me ol{/*ordered list because it was a requirment, yet this could have been a <ul>*/
-	padding-top:20px;
-	margin:10px 0px 0px 15px;
-
-	font-size:27px;
-	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-	text-align: center;
-	list-style-type: none;
-
+/* Dark mode */
+body.dark-mode {
+  background-color: #0D1117;
+  color: #e6edf3;
+}
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #161B22;
+  color: #e6edf3;
+}
+body.dark-mode nav a {
+  color: #58A6FF;
+}
+body.dark-mode nav a:hover {
+  background-color: #30363D;
+  color: #fff;
+}
+body.dark-mode #about-me {
+  background-color: #161B22;
 }
 
-#contact-me h3{
-	float: left;
-	margin-right: 25px;
-}
-
-#contact-me a{
-	text-decoration: none;
-	color:#1C2541;
-}
-
-.e-mail:hover{
-	font-size: 40px;
-}
-
-.linked-in a:hover{
-	font-size: 40px;
-}
-
-.github a:hover{
-	font-size: 40px;
-}
-
-footer{
-	position:relative;/*so the position of the header is relative to the last HTML item*/
-   	bottom:0;/*so there are 0px between the bottom of the screen and the footer*/
-   	
-   	width:100%;
-   	height:50px;   /* Height of the footer */
-  	padding-top: 20px;
-	color:white;
-	text-align:center;
-	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-	background-color: #1C2541;
 }
