@@ -217,9 +217,7 @@ body.dark-mode nav a:hover {
 body.dark-mode #about-me {
   background-color: #161B22;
 }
-body.dark-mode #contact-me a:hover {
-  color: #D3D3D3;
-}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .site-header {
@@ -246,4 +244,3 @@ body.dark-mode #contact-me a:hover {
   .branding h2 {
     font-size: 1rem;
   }
-}
