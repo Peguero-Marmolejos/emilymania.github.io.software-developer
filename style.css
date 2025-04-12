@@ -3,20 +3,13 @@
   --font-heading: 'Playfair Display', serif;
   --main-blue: #1C2541;
   --accent-blue: #6DB1BF;
-  --highlight-yellow: #FFD700;
-  --dark-bg: #0D1117;
-  --dark-card: #161B22;
-  --light-text: #e6edf3;
-}
-
-* {
-  box-sizing: border-box;
+  --highlight-yellow: yellow;
 }
 
 body {
   margin: 0;
-  background-color: var(--accent-blue);
   font-family: var(--font-body);
+  background-color: var(--accent-blue);
   color: var(--main-blue);
   transition: background-color 0.3s, color 0.3s;
 }
@@ -27,9 +20,7 @@ body {
   top: 0;
   width: 100%;
   height: 125px;
-  background: var(--main-blue) url("uni.gif") repeat;
-  border-bottom: 5px solid var(--main-blue);
-  box-shadow: 1px 2px 1px grey;
+  background-color: var(--main-blue);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,9 +30,9 @@ body {
 
 .branding h1,
 .branding h2 {
-  margin: 0;
   color: var(--accent-blue);
   font-family: var(--font-heading);
+  margin: 0;
 }
 
 .branding h1 {
@@ -52,87 +43,69 @@ body {
   font-size: 1.25rem;
 }
 
-.branding:hover h1,
-.branding:hover h2 {
-  color: white;
-}
-
 /* Navigation */
 .main-nav ul {
   display: flex;
   gap: 2rem;
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .main-nav a {
   text-decoration: none;
   color: var(--accent-blue);
+  font-size: 1.2rem;
   padding: 1rem;
-  font-size: 1.3rem;
-  border-right: 3px solid var(--highlight-yellow);
   transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
 }
 
 .main-nav a:hover {
-  background-color: var(--main-blue);
+  font-size: 1.4rem;
   color: var(--highlight-yellow);
-  font-size: 1.45rem;
+  border-bottom: 2px solid var(--highlight-yellow);
 }
 
-/* Main Content */
 main {
   max-width: 1000px;
   margin: 160px auto 0 auto;
   padding: 1rem;
 }
 
-section {
-  margin-bottom: 3rem;
+article h3 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
   text-align: center;
 }
 
-article h3 {
+.circular {
   display: block;
-  width: 100%;
-  text-align: center;
-  margin: 0 auto 20px auto;
-  font-family: var(--font-body);
-  font-size: 2rem;
+  margin: 2rem auto;
+  border-radius: 50%;
 }
 
 p {
   font-size: 1.1rem;
   padding: 0.5rem 50px;
-}
-
-/* Image */
-.circular {
-  display: block;
-  margin: 0 auto 2rem auto;
-  border-radius: 50%;
-}
-
-/* Contact Section */
-#contact-me ol,
-#contact-me ul {
-  padding: 0 50px;
-  margin: 0;
-  font-size: 1.3rem;
-  font-family: var(--font-body);
   text-align: center;
-  list-style-type: none;
 }
 
-#contact-me li {
+.contact-list {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.contact-list li {
   margin: 1rem 0;
 }
 
 .contact-list a {
   text-decoration: none;
+  font-size: 1.2rem;
   color: var(--main-blue);
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .contact-list a:hover {
@@ -140,21 +113,19 @@ p {
   color: var(--highlight-yellow);
 }
 
-/* Footer */
 footer {
   background-color: var(--main-blue);
   color: white;
   text-align: center;
   padding: 1rem 0;
-  font-size: 0.9rem;
 }
 
-/* Dark Mode Toggle */
+/* Toggle */
 .dark-toggle {
   position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 1000;
+  z-index: 2000;
 }
 
 .switch {
@@ -174,7 +145,10 @@ footer {
   background-color: #ccc;
   transition: .4s;
   border-radius: 34px;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .slider:before {
@@ -199,14 +173,14 @@ input:checked + .slider:before {
 
 /* Dark Mode */
 body.dark-mode {
-  background-color: var(--dark-bg);
-  color: var(--light-text);
+  background-color: #0D1117;
+  color: #e6edf3;
 }
 
-body.dark-mode .site-header,
+body.dark-mode header,
 body.dark-mode footer {
-  background-color: var(--dark-card);
-  color: var(--light-text);
+  background-color: #161B22;
+  color: #e6edf3;
 }
 
 body.dark-mode nav a {
@@ -214,46 +188,10 @@ body.dark-mode nav a {
 }
 
 body.dark-mode nav a:hover {
-  background-color: #30363D;
-  color: var(--highlight-yellow);
-}
-
-body.dark-mode .contact-list a {
-  color: #58A6FF;
+  color: #fff;
+  border-bottom-color: #58A6FF;
 }
 
 body.dark-mode .contact-list a:hover {
-  color: var(--highlight-yellow);
-}
-
-body.dark-mode #about-me {
-  background-color: var(--dark-card);
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .site-header {
-    flex-direction: column;
-    height: auto;
-    text-align: center;
-    padding: 1rem;
-  }
-
-  .main-nav ul {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  main {
-    margin-top: 220px;
-    padding: 1rem;
-  }
-
-  .branding h1 {
-    font-size: 2rem;
-  }
-
-  .branding h2 {
-    font-size: 1rem;
-  }
+  color: #58A6FF;
 }
