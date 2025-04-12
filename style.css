@@ -1,48 +1,20 @@
 :root {
-  --font-body: 'Inter', sans-serif;
-  --font-heading: 'Playfair Display', serif;
   --main-blue: #1C2541;
   --accent-blue: #6DB1BF;
   --highlight-yellow: yellow;
-  --dark-background: #0D1117;
-  --dark-text: #e6edf3;
+  --font-body: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+  --font-heading: 'Didot', 'Didot LT STD', 'Hoefler Text', 'Garamond', serif;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: var(--font-body);
   background-color: var(--accent-blue);
+  font-family: var(--font-body);
   color: var(--main-blue);
-  transition: background-color 0.3s, color 0.3s;
-}
-
-/* Dark Mode Styles */
-body.dark-mode {
-  background-color: var(--dark-background);
-  color: var(--dark-text);
-}
-
-body.dark-mode .site-header,
-body.dark-mode footer {
-  background-color: #161B22;
-  color: var(--dark-text);
-}
-
-body.dark-mode .main-nav a {
-  color: #58A6FF;
-}
-
-body.dark-mode .main-nav a:hover {
-  color: yellow;
-  border-bottom-color: yellow;
-}
-
-body.dark-mode .contact-list a {
-  color: #8ab4f8;
-}
-
-body.dark-mode .contact-list a:hover {
-  color: yellow;
 }
 
 /* Header */
@@ -51,7 +23,9 @@ body.dark-mode .contact-list a:hover {
   top: 0;
   width: 100%;
   height: 125px;
-  background-color: var(--main-blue);
+  background: var(--main-blue) url("uni.gif") repeat;
+  border-bottom: 5px solid var(--main-blue);
+  box-shadow: 1px 2px 1px grey;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,9 +35,9 @@ body.dark-mode .contact-list a:hover {
 
 .branding h1,
 .branding h2 {
+  margin: 0;
   color: var(--accent-blue);
   font-family: var(--font-heading);
-  margin: 0;
 }
 
 .branding h1 {
@@ -74,114 +48,147 @@ body.dark-mode .contact-list a:hover {
   font-size: 1.25rem;
 }
 
+.branding:hover h1,
+.branding:hover h2 {
+  color: white;
+}
+article h3 {
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+  font-size: 34px;
+}
+
 /* Navigation */
 .main-nav ul {
   display: flex;
   gap: 2rem;
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 .main-nav a {
   text-decoration: none;
   color: var(--accent-blue);
-  font-size: 1.2rem;
   padding: 1rem;
-  transition: all 0.3s ease;
-  border-bottom: 2px solid transparent;
+  font-size: 1.2rem;
+  border-right: 3px solid var(--highlight-yellow);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .main-nav a:hover {
-  font-size: 1.4rem;
+  background-color: var(--main-blue);
   color: var(--highlight-yellow);
-  border-bottom: 2px solid var(--highlight-yellow);
+  opacity: 0.7;
 }
 
+/* Main Content */
 main {
   max-width: 1000px;
   margin: 160px auto 0 auto;
   padding: 1rem;
 }
 
-article h3 {
-  font-family: var(--font-heading);
-  font-size: 2rem;
+section {
+  margin-bottom: 3rem;
   text-align: center;
 }
 
-.circular {
-  display: block;
-  margin: 2rem auto;
-  border-radius: 50%;
+h3 {
+  font-size: 2rem;
 }
 
 p {
   font-size: 1.1rem;
-  padding: 0.5rem 50px;
-  text-align: center;
+  padding: 0.5rem 2rem;
 }
 
+/* Image */
+.circular {
+  display: block;
+  margin: 0 auto 2rem auto;
+  border-radius: 50%;
+}
+
+/* Contact Section */
 .contact-list {
   list-style: none;
-  text-align: center;
   padding: 0;
 }
 
 .contact-list li {
   margin: 1rem 0;
+  font-size: 1.5rem;
 }
 
 .contact-list a {
   text-decoration: none;
-  font-size: 1.2rem;
   color: var(--main-blue);
-  transition: all 0.3s ease;
+  transition: font-size 0.2s ease;
 }
 
 .contact-list a:hover {
-  font-size: 1.5rem;
-  color: var(--highlight-yellow);
+  font-size: 2rem;
 }
 
+/* Footer */
 footer {
   background-color: var(--main-blue);
   color: white;
   text-align: center;
   padding: 1rem 0;
+  font-size: 0.9rem;
 }
 
-/* Toggle Switch Styles */
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  main {
+    margin-top: 220px;
+    padding: 1rem;
+  }
+
+  .branding h1 {
+    font-size: 2rem;
+  }
+
+  .branding h2 {
+    font-size: 1rem;
+  }
+  /* Toggle switch styling */
 .dark-toggle {
   position: fixed;
   top: 20px;
   right: 20px;
   z-index: 1000;
 }
-
 .switch {
   position: relative;
   display: inline-block;
   width: 50px;
   height: 24px;
 }
-
-.switch input {
-  display: none;
-}
-
+.switch input { display: none; }
 .slider {
   position: absolute;
   cursor: pointer;
   background-color: #ccc;
   transition: .4s;
   border-radius: 34px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
 }
-
 .slider:before {
   content: "";
   position: absolute;
@@ -193,11 +200,30 @@ footer {
   transition: .4s;
   border-radius: 50%;
 }
-
 input:checked + .slider {
   background-color: #2196F3;
 }
-
 input:checked + .slider:before {
   transform: translateX(26px);
+}
+
+/* Dark mode */
+body.dark-mode {
+  background-color: #0D1117;
+  color: #e6edf3;
+}
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #161B22;
+  color: #e6edf3;
+}
+body.dark-mode nav a {
+  color: #58A6FF;
+}
+body.dark-mode nav a:hover {
+  background-color: #30363D;
+  color: #fff;
+}
+body.dark-mode #about-me {
+  background-color: #161B22;
 }
