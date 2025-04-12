@@ -218,3 +218,41 @@ input:checked + .slider {
 input:checked + .slider:before {
   transform: translateX(26px);
 }
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #0D1117;
+  color: #e6edf3;
+}
+
+body.dark-mode .site-header,
+body.dark-mode footer {
+  background-color: #161B22;
+  color: #e6edf3;
+}
+
+body.dark-mode .main-nav a {
+  color: #58A6FF;
+}
+
+body.dark-mode .main-nav a:hover {
+  color: yellow;
+  border-bottom-color: yellow;
+}
+
+body.dark-mode .contact-list a {
+  color: #8ab4f8;
+}
+
+body.dark-mode .contact-list a:hover {
+  color: yellow;
+}
+
+body.dark-mode .slider {
+  background-color: #555;
+}
+
+body.dark-mode .slider:before {
+  background-color: white;
+}
+
