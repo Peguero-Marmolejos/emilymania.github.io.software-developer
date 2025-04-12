@@ -3,7 +3,10 @@
   --font-heading: 'Playfair Display', serif;
   --main-blue: #1C2541;
   --accent-blue: #6DB1BF;
-  --highlight-yellow: yellow;
+  --highlight-yellow: #FFD700;
+  --dark-bg: #0D1117;
+  --dark-card: #161B22;
+  --light-text: #e6edf3;
 }
 
 * {
@@ -54,16 +57,6 @@ body {
   color: white;
 }
 
-/* Article Headings */
-article h3 {
-  display: block;
-  width: 100%;
-  text-align: center;
-  margin: 0 auto 20px auto;
-  font-family: var(--font-body);
-  font-size: 34px;
-}
-
 /* Navigation */
 .main-nav ul {
   display: flex;
@@ -77,15 +70,15 @@ article h3 {
   text-decoration: none;
   color: var(--accent-blue);
   padding: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   border-right: 3px solid var(--highlight-yellow);
-  transition: background-color 0.3s, color 0.3s;
+  transition: all 0.3s ease;
 }
 
 .main-nav a:hover {
   background-color: var(--main-blue);
   color: var(--highlight-yellow);
-  opacity: 0.7;
+  font-size: 1.45rem;
 }
 
 /* Main Content */
@@ -100,7 +93,12 @@ section {
   text-align: center;
 }
 
-h3 {
+article h3 {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto 20px auto;
+  font-family: var(--font-body);
   font-size: 2rem;
 }
 
@@ -117,10 +115,11 @@ p {
 }
 
 /* Contact Section */
-#contact-me ol {
+#contact-me ol,
+#contact-me ul {
   padding: 0 50px;
   margin: 0;
-  font-size: 27px;
+  font-size: 1.3rem;
   font-family: var(--font-body);
   text-align: center;
   list-style-type: none;
@@ -133,11 +132,12 @@ p {
 .contact-list a {
   text-decoration: none;
   color: var(--main-blue);
-  transition: font-size 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .contact-list a:hover {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  color: var(--highlight-yellow);
 }
 
 /* Footer */
@@ -149,7 +149,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Toggle switch styling */
+/* Dark Mode Toggle */
 .dark-toggle {
   position: fixed;
   top: 20px;
@@ -197,65 +197,16 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Dark mode */
-
-/* Toggle switch styling */
-.dark-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 24px;
-}
-
-.switch input {
-  display: none;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  background-color: #ccc;
-  transition: .4s;
-  border-radius: 34px;
-  top: 0; left: 0; right: 0; bottom: 0;
-}
-
-.slider:before {
-  content: "";
-  position: absolute;
-  height: 18px;
-  width: 18px;
-  left: 3px;
-  bottom: 3px;
-  background-color: white;
-  transition: .4s;
-  border-radius: 50%;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
-
+/* Dark Mode */
 body.dark-mode {
-  background-color: #0D1117;
-  color: #e6edf3;
+  background-color: var(--dark-bg);
+  color: var(--light-text);
 }
 
-body.dark-mode header,
+body.dark-mode .site-header,
 body.dark-mode footer {
-  background-color: #161B22;
-  color: #e6edf3;
+  background-color: var(--dark-card);
+  color: var(--light-text);
 }
 
 body.dark-mode nav a {
@@ -264,11 +215,19 @@ body.dark-mode nav a {
 
 body.dark-mode nav a:hover {
   background-color: #30363D;
-  color: #fff;
+  color: var(--highlight-yellow);
+}
+
+body.dark-mode .contact-list a {
+  color: #58A6FF;
+}
+
+body.dark-mode .contact-list a:hover {
+  color: var(--highlight-yellow);
 }
 
 body.dark-mode #about-me {
-  background-color: #161B22;
+  background-color: var(--dark-card);
 }
 
 /* Responsive Design */
