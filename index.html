@@ -4,18 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Emily the Developer</title>
+
+  <!-- Normalize CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- AOS Scroll Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Your Main Styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Dark Mode Toggle -->
   <div id="dark-mode-toggle" class="dark-toggle">
-  <label class="switch">
-    <input type="checkbox" id="toggle-dark-mode">
-    <span class="slider round"></span>
-  </label>
+    <label class="switch">
+      <input type="checkbox" id="toggle-dark-mode">
+      <span class="slider round"></span>
+    </label>
   </div>
+
+  <!-- Header -->
   <header class="site-header">
     <div class="branding">
       <h1>Emily Peguero Marmolejos</h1>
@@ -30,12 +42,17 @@
     </nav>
   </header>
 
+  <!-- Main Content -->
   <main>
     <article id="introduction" data-aos="fade-up">
       <h3>Introduction</h3>
       <img src="me.jpg" alt="Emily Peguero Marmolejos - Software Developer" class="circular" width="275" />
-      <p data-aos="fade-up" data-aos-delay="100">Emily here, a software developer with an affinity for mathematics, logic-based problem solving, philosophy, poetry, and physics.</p>
-      <p data-aos="fade-up" data-aos-delay="200">Born and raised in New York City, now based in Fargo, ND.</p>
+      <p data-aos="fade-up" data-aos-delay="100">
+        Emily here, a software developer with an affinity for mathematics, logic-based problem solving, philosophy, poetry, and physics.
+      </p>
+      <p data-aos="fade-up" data-aos-delay="200">
+        Born and raised in New York City, now based in Fargo, ND.
+      </p>
     </article>
 
     <article id="about-me" data-aos="fade-up">
@@ -49,29 +66,4 @@
     <article id="contact-me" data-aos="fade-up">
       <h3>Contact</h3>
       <ul class="contact-list">
-        <li data-aos="fade-up" data-aos-delay="800"><a href="https://www.linkedin.com/in/peguero-marmolejos/" target="_blank">LinkedIn</a></li>
-        <li data-aos="fade-up" data-aos-delay="900"><a href="https://github.com/peguero-marmolejos" target="_blank">GitHub</a></li>
-        <li data-aos="fade-up" data-aos-delay="1000"><a href="mailto:erpegueromarmolejos@gmail.com?subject=Let’s%20Talk">Email Me</a></li>
-      </ul>
-    </article>
-  </main>
-
-  <footer>
-    © Emily Peguero Marmolejos — Software Developer
-  </footer>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-     AOS.init({
-       duration: 800,
-       once: true
-     });
-  </script>
-  <script>
-  const toggle = document.getElementById('toggle-dark-mode');
-  toggle.addEventListener('change', () => {
-    document.body.classList.toggle('dark-mode');
-  });
-</script>
-
-</body>
-</html>
+        <li data-aos="fade-up" data-aos-delay="800"><a href="https://www.linkedin.com/in/peguero-marmolejos/" target="_blank" rel_
