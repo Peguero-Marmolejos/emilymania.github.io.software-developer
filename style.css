@@ -52,6 +52,12 @@ body {
 .branding:hover h2 {
   color: white;
 }
+article h3 {
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+  font-size: 34px;
+}
 
 /* Navigation */
 .main-nav ul {
