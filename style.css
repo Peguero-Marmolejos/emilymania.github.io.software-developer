@@ -1,9 +1,9 @@
 :root {
-  --font-body: 'Inter', sans-serif;
-  --font-heading: 'Playfair Display', serif;
   --main-blue: #1C2541;
   --accent-blue: #6DB1BF;
-  --highlight-yellow: yellow;
+  --highlight-yellow: #F9DC5C;
+  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Playfair Display', serif;
 }
 
 * {
@@ -15,6 +15,7 @@ body {
   background-color: var(--accent-blue);
   font-family: var(--font-body);
   color: var(--main-blue);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* Header */
@@ -53,17 +54,7 @@ body {
   color: white;
 }
 
-/* Article Headings */
-article h3 {
-  display: block;
-  width: 100%;
-  text-align: center;
-  margin: 0 auto 20px auto;
-  font-family: var(--font-body);
-  font-size: 34px;
-}
-
-/* Navigation */
+/* Nav */
 .main-nav ul {
   display: flex;
   gap: 2rem;
@@ -87,6 +78,63 @@ article h3 {
   opacity: 0.7;
 }
 
+/* Dark Mode Toggle */
+.dark-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 32px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: background-color 0.4s;
+}
+
+.slider:before {
+  content: "🌞";
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 3px;
+  bottom: 3px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 26px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.4s ease-in-out;
+}
+
+input:checked + .slider {
+  background-color: #444;
+}
+
+input:checked + .slider:before {
+  content: "🌜";
+  transform: translateX(28px);
+}
+
 /* Main Content */
 main {
   max-width: 1000px;
@@ -99,13 +147,17 @@ section {
   text-align: center;
 }
 
-h3 {
+article h3 {
+  text-align: center;
+  font-family: var(--font-heading);
   font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 p {
   font-size: 1.1rem;
-  padding: 0.5rem 50px;
+  padding: 0.5rem 2rem;
+  text-align: left;
 }
 
 /* Image */
@@ -116,17 +168,15 @@ p {
 }
 
 /* Contact Section */
-#contact-me ol {
-  padding: 0 50px;
-  margin: 0;
-  font-size: 27px;
-  font-family: var(--font-body);
-  text-align: center;
-  list-style-type: none;
+.contact-list {
+  list-style: none;
+  padding-left: 2rem;
 }
 
-#contact-me li {
+.contact-list li {
   margin: 1rem 0;
+  font-size: 1.5rem;
+  text-align: left;
 }
 
 .contact-list a {
@@ -148,70 +198,32 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Toggle switch styling */
-.dark-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-}
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 24px;
-}
-.switch input {
-  display: none;
-}
-.slider {
-  position: absolute;
-  cursor: pointer;
-  background-color: #ccc;
-  transition: .4s;
-  border-radius: 34px;
-  top: 0; left: 0; right: 0; bottom: 0;
-}
-.slider:before {
-  content: "";
-  position: absolute;
-  height: 18px;
-  width: 18px;
-  left: 3px;
-  bottom: 3px;
-  background-color: white;
-  transition: .4s;
-  border-radius: 50%;
-}
-input:checked + .slider {
-  background-color: #2196F3;
-}
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
-
-/* Dark mode */
+/* Dark Mode Styles */
 body.dark-mode {
   background-color: #0D1117;
   color: #e6edf3;
 }
+
 body.dark-mode header,
 body.dark-mode footer {
   background-color: #161B22;
   color: #e6edf3;
 }
+
 body.dark-mode nav a {
   color: #58A6FF;
 }
+
 body.dark-mode nav a:hover {
   background-color: #30363D;
   color: #fff;
 }
+
 body.dark-mode #about-me {
   background-color: #161B22;
 }
 
-/* Responsive Design */
+/* Responsive */
 @media screen and (max-width: 768px) {
   .site-header {
     flex-direction: column;
