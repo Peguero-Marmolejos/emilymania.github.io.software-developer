@@ -14,72 +14,78 @@
   <!-- AOS Scroll Animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <!-- Main Styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Dark Mode Toggle -->
-  <div id="dark-mode-toggle" class="dark-toggle">
-    <label class="switch">
-      <input type="checkbox" id="toggle-dark-mode">
-      <span class="slider round"></span>
-    </label>
+<!-- Dark Mode Toggle -->
+<div id="dark-mode-toggle" class="dark-toggle">
+  <label class="switch">
+    <input type="checkbox" id="toggle-dark-mode">
+    <span class="slider round"></span>
+  </label>
+</div>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="branding">
+    <h1>Emily Peguero Marmolejos</h1>
+    <h2>Software Developer</h2>
   </div>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#about-me">About Me</a></li>
+      <li><a href="#contact-me">Contact Me</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="branding">
-      <h1>Emily Peguero Marmolejos</h1>
-      <h2>Software Developer</h2>
-    </div>
+<!-- Main Content -->
+<main>
+  <article id="introduction" data-aos="fade-up">
+    <h3>Introduction</h3>
+    <img src="me.jpg" alt="Emily Peguero Marmolejos" class="circular" width="275" />
+    <p data-aos="fade-up" data-aos-delay="100">
+      Emily here, a software developer with an affinity for mathematics, logic-based problem solving, philosophy, poetry, and physics.
+    </p>
+    <p data-aos="fade-up" data-aos-delay="200">
+      Born and raised in New York City, now based in Fargo, ND.
+    </p>
+  </article>
 
-    <nav class="main-nav">
-      <ul>
-        <li><a href="#introduction">Introduction</a></li>
-        <li><a href="#about-me">About Me</a></li>
-        <li><a href="#contact-me">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <article id="about-me" data-aos="fade-up">
+    <h3>About Me</h3>
+    <p>Let's play chess! I react to a good chess game the way most people react to a great boxing match.</p>
+    <p>Collaboration inspires me. I enjoy working with teams and uplifting others.</p>
+    <p>I'm logical (I minored in math), but my colorful life taught me the value of human connection.</p>
+    <p>Gym bro-in-training, novice bio-hacker — let’s live forever!</p>
+  </article>
 
-  <!-- Main Content -->
-  <main>
-    <article id="introduction" data-aos="fade-up">
-      <h3>Introduction</h3>
-      <img src="me.jpg" alt="Emily Peguero Marmolejos - Software Developer" class="circular" width="275" />
-      <p data-aos="fade-up" data-aos-delay="100">
-        Emily here, a software developer with an affinity for mathematics, logic-based problem solving, philosophy, poetry, and physics.
-      </p>
-      <p data-aos="fade-up" data-aos-delay="200">
-        Born and raised in New York City, now based in Fargo, ND.
-      </p>
-    </article>
+  <article id="contact-me" data-aos="fade-up">
+    <h3>Contact</h3>
+    <ul class="contact-list">
+      <li><a href="https://www.linkedin.com/in/peguero-marmolejos/" target="_blank">LinkedIn</a></li>
+      <li><a href="mailto:emily@example.com">Email</a></li>
+    </ul>
+  </article>
+</main>
 
-    <article id="about-me" data-aos="fade-up">
-      <h3>About Me</h3>
-      <p data-aos="fade-up" data-aos-delay="400">Let's play chess! I react to a good chess game the way most people react to a great boxing match.</p>
-      <p data-aos="fade-up" data-aos-delay="500">Collaboration inspires me. I enjoy working with teams and uplifting others.</p>
-      <p data-aos="fade-up" data-aos-delay="600">I'm logical (I minored in math), but my colorful life taught me the value of human connection.</p>
-      <p data-aos="fade-up" data-aos-delay="700">Gym bro-in-training, novice bio-hacker — let’s live forever!</p>
-    </article>
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Emily Peguero Marmolejos</p>
+</footer>
 
-    <article id="contact-me" data-aos="fade-up">
-      <h3>Contact</h3>
-      <ul class="contact-list">
-        <li data-aos="fade-up" data-aos-delay="800">
-          <a href="https://www.linkedin.com/in/peguero-marmolejos/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </li>
-        <li data-aos="fade-up" data-aos-delay="900">
-          <a href="mailto:emily@example.com">Email</a>
-        </li>
-      </ul>
-    </article>
-  </main>
+<!-- AOS Scroll Animations -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Emily Peguero Marmolejos</p>
-  </footer>
-
-  <!-- AOS Scroll Animations -->
+<!-- Dark Mode Script -->
+<script>
+  const toggleDarkMode = document.getElementById('toggle-dark-mode');
+  toggleDarkMode.addEventListener('change', () => {
+    document.body.classList.toggle('dark-mode', toggleDarkMode.checked);
+  });
+</script>
+</body>
+</html>
