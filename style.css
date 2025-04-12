@@ -1,9 +1,9 @@
 :root {
+  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Playfair Display', serif;
   --main-blue: #1C2541;
   --accent-blue: #6DB1BF;
   --highlight-yellow: yellow;
-  --font-body: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-  --font-heading: 'Didot', 'Didot LT STD', 'Hoefler Text', 'Garamond', serif;
 }
 
 * {
