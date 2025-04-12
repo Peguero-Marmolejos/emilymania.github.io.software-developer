@@ -4,101 +4,73 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Emily the Developer</title>
-
-  <!-- Normalize CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
-
-  <!-- AOS Scroll Animations -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-
-<!-- Dark Mode Toggle -->
-<div id="dark-mode-toggle" class="dark-toggle">
+  <div id="dark-mode-toggle" class="dark-toggle">
   <label class="switch">
     <input type="checkbox" id="toggle-dark-mode">
     <span class="slider round"></span>
   </label>
-</div>
-
-<!-- Header -->
-<header class="site-header">
-  <div class="branding">
-    <h1>Emily Peguero Marmolejos</h1>
-    <h2>Software Developer</h2>
   </div>
-  <nav class="main-nav">
-    <ul>
-      <li><a href="#introduction">Introduction</a></li>
-      <li><a href="#about-me">About Me</a></li>
-      <li><a href="#contact-me">Contact Me</a></li>
-    </ul>
-  </nav>
-</header>
+  <header class="site-header">
+    <div class="branding">
+      <h1>Emily Peguero Marmolejos</h1>
+      <h2>Software Developer</h2>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#contact-me">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<!-- Main Content -->
-<main>
-  <article id="introduction" data-aos="fade-up">
-    <h3>Introduction</h3>
-    <img src="me.jpg" alt="Emily Peguero Marmolejos" class="circular" width="275" />
-    <p data-aos="fade-up" data-aos-delay="100">
-      Emily here, a software developer with an affinity for mathematics, logic-based problem solving, philosophy, poetry, and physics.
-    </p>
-    <p data-aos="fade-up" data-aos-delay="200">
-      Born and raised in New York City, now based in Fargo, ND.
-    </p>
-  </article>
+  <main>
+    <article id="introduction" data-aos="fade-up">
+      <h3>Introduction</h3>
+      <img src="me.jpg" alt="Emily Peguero Marmolejos - Software Developer" class="circular" width="275" />
+      <p data-aos="fade-up" data-aos-delay="100">Emily here, a software developer with an affinity for mathematics, logic-based problem solving, philosophy, poetry, and physics.</p>
+      <p data-aos="fade-up" data-aos-delay="200">Born and raised in New York City, now based in Fargo, ND.</p>
+    </article>
 
-  <article id="about-me" data-aos="fade-up">
-    <h3>About Me</h3>
-    <p>Let's play chess! I react to a good chess game the way most people react to a great boxing match.</p>
-    <p>Collaboration inspires me. I enjoy working with teams and uplifting others.</p>
-    <p>I'm logical (I minored in math), but my colorful life taught me the value of human connection.</p>
-    <p>Gym bro-in-training, novice bio-hacker — let’s live forever!</p>
-  </article>
+    <article id="about-me" data-aos="fade-up">
+      <h3>About Me</h3>
+      <p data-aos="fade-up" data-aos-delay="400">Let's play chess! I react to a good chess game the way most people react to a great boxing match.</p>
+      <p data-aos="fade-up" data-aos-delay="500">Collaboration inspires me. I enjoy working with teams and uplifting others.</p>
+      <p data-aos="fade-up" data-aos-delay="600">I'm logical (I minored in math), but my colorful life taught me the value of human connection.</p>
+      <p data-aos="fade-up" data-aos-delay="700">Gym bro-in-training, novice bio-hacker — let’s live forever!</p>
+    </article>
 
-  <article id="contact-me" data-aos="fade-up">
-    <h3>Contact</h3>
-    <ul class="contact-list">
-      <li><a href="https://www.linkedin.com/in/peguero-marmolejos/" target="_blank">LinkedIn</a></li>
-      <li><a href="mailto:emily@example.com">Email</a></li>
-    </ul>
-  </article>
-</main>
+    <article id="contact-me" data-aos="fade-up">
+      <h3>Contact</h3>
+      <ul class="contact-list">
+        <li data-aos="fade-up" data-aos-delay="800"><a href="https://www.linkedin.com/in/peguero-marmolejos/" target="_blank">LinkedIn</a></li>
+        <li data-aos="fade-up" data-aos-delay="900"><a href="https://github.com/peguero-marmolejos" target="_blank">GitHub</a></li>
+        <li data-aos="fade-up" data-aos-delay="1000"><a href="mailto:erpegueromarmolejos@gmail.com?subject=Let’s%20Talk">Email Me</a></li>
+      </ul>
+    </article>
+  </main>
 
-<!-- Footer -->
-<footer>
-  <p>&copy; 2025 Emily Peguero Marmolejos</p>
-</footer>
-
-<!-- AOS Scroll Animations -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init();</script>
-
-<script>
-  const toggleDarkMode = document.getElementById('toggle-dark-mode');
-
-  // Load saved preference for dark mode
-  if (localStorage.getItem('darkMode') === 'enabled') {
-    document.body.classList.add('dark-mode');
-    toggleDarkMode.checked = true;
-  }
-
-  // Toggle dark mode when checkbox changes
-  toggleDarkMode.addEventListener('change', () => {
-    if (toggleDarkMode.checked) {
-      document.body.classList.add('dark-mode');
-      localStorage.setItem('darkMode', 'enabled');
-    } else {
-      document.body.classList.remove('dark-mode');
-      localStorage.setItem('darkMode', 'disabled');
-    }
+  <footer>
+    © Emily Peguero Marmolejos — Software Developer
+  </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+     AOS.init({
+       duration: 800,
+       once: true
+     });
+  </script>
+  <script>
+  const toggle = document.getElementById('toggle-dark-mode');
+  toggle.addEventListener('change', () => {
+    document.body.classList.toggle('dark-mode');
   });
 </script>
+
 </body>
 </html>
